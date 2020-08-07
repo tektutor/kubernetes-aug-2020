@@ -1,0 +1,1 @@
+kubeadm join 172.31.81.214:6443 --token 7nfpo6.bmesynrjb60mf2um     --discovery-token-ca-cert-hash sha256:676170d1c8288fe28709490fea1e6f450d02e238b1fb14df3888da29949b1d71
