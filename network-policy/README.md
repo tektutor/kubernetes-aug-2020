@@ -1,4 +1,4 @@
-In order to try this lab exerices, you need to have a working kubernetes cluster.
+In order to try this lab exerice, you need to have a working kubernetes cluster.
 
 It is important that the kubeadm init was done as shown below while bootstrapping master node.
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
