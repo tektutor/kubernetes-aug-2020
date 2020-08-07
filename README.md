@@ -59,11 +59,11 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ## You may bootstrap master node as shown below
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 
-You can install calico cni as shown below
+## You can install calico cni as shown below
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
-You need to untaint master node to schedule user pods on master node
+## You need to untaint master node to schedule user pods on master node<br>
 kubectl taint node <your node name> node-role.kubernetes.io/master:NoSchedule-
 
-You are expected to have a working single node K8 cluster<br>
+## You are expected to have a working single node K8 cluster<br>
 kubectl get nodes
