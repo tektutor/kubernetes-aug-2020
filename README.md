@@ -2,7 +2,7 @@
 
 You will need a Kubernetes Cluster to try these lab exercises.
 
-<h2>Instructions to install Docker in Ubuntu<h2>
+## Instructions to install Docker in Ubuntu
 
 sudo apt-get update
 sudo apt-get install \
@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 
-<h2>On CentOS machines</h2>
+## On CentOS machines
 
 sudo yum install -y yum-utils
 
