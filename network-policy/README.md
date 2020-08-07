@@ -7,49 +7,39 @@ The assumption is that you are in network-policy folder.
 
 First you may deploy nginx as shown below
 
-Terminal  1
-+++++++++++
+<b>Terminal  1<b>
 kubectl apply -f nginx-deploy.yml
 kubectl apply -f nginx-service.yml
 
-Terminal 2
-++++++++++
+<b>Terminal 2</b>
 You may now try this command from a separate terminal
 kubectl run -i --tty busybox -n policy-demo --image=yauritux/busybox-curl --restart=Never -- sh
 
-Terminal 3
-++++++++++
+<b>Terminal 3<b>
 From another terminal, you may try this
 kubectl run -i --tty bb -n policy-demo --image=yauritux/busybox-curl --restart=Never -- sh
 
 
-From the Terminal 1
-+++++++++++++++++++
+<b>From the Terminal 1</b>
 Now you may verify if nginx pods and two busybox pods are running under policy-demo namespace
 kubectl get pods -n policy-demo
 
-From Terminal 2 and 3
-+++++++++++++++++++++
+<b>From Terminal 2 and 3</b>
 You can try to access http://nginx
 This time, you should be able to access the nginx nodeport service as network policy isn't applied yet.
 
-From Terminal 1
-+++++++++++++++
+<b>From Terminal 1<b>
 kubectl apply -f deny-all.yml
 
-From Terminal 2 and 3
-+++++++++++++++++++++
+<b>From Terminal 2 and 3</b>
 From busybox and bb pods, you should not be able to access http://nginx
 
-Move back to Terminal 1
-+++++++++++++++++++++++
+<b>Move back to Terminal 1</b>
 kubectl apply -f access-only-for-restricted-pods.yml
 
-From  Terminal 2 (busybox pod)
-++++++++++++++++++++++++++++++
+<b>From  Terminal 2 (busybox pod)</b>
 http://nginx should be possible
 
-From Terminal 3 (bb pod)
-+++++++++++++++++++++++++
+<b>From Terminal 3 (bb pod)</b>
 http://nginx should not work.
 
