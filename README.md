@@ -65,5 +65,5 @@ kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 You need to untaint master node to schedule user pods on master node
 kubectl taint node <your node name> node-role.kubernetes.io/master:NoSchedule-
 
-You are expected to have a working single node K8 cluster
+You are expected to have a working single node K8 cluster<br>
 kubectl get nodes
