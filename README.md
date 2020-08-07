@@ -32,7 +32,7 @@ sudo yum-config-manager \
     
 sudo yum install docker-ce docker-ce-cli containerd.io
 
-You need to enable and start the docker service
+You need to enable and start the docker service<br>
 sudo systemctl enable docker && sudo systemctl start docker
 
 
